@@ -33,5 +33,9 @@ ADD CONSTRAINT PRIMARY KEY(person_id); --adds primary key to an existing table
 
 
 --AUTO_INCREMENT
+
+ALTER TABLE employees
+MODIFY COLUMN employee_id INT AUTO_INCREMENT; --add auto increment to existing column
+
 ALTER TABLE employees
 AUTO_INCREMENT = 1000; --auto increment starts at 1000
