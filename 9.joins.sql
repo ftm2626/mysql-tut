@@ -16,3 +16,15 @@ ON transactions.customer_id = customers.customer_id;
 SELECT * FROM transactions RIGHT JOIN  customers
 ON transactions.customer_id = customers.customer_id; 
 --display EVERYTHING from the right table
+
+
+-- SELF JOIN
+-- join another copy of a table to itself
+-- used to compare rows of the same TABLE
+-- helps to display a heirarchy of data
+
+SELECT  a.first_name,a.last_name ,
+		CONCAT(b.first_name," " ,b.last_name) as "refered_by"
+FROM customers AS a
+INNER JOIN customers AS b
+ON a.referral_id = b.customer_id;
